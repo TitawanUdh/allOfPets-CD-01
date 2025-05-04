@@ -10,6 +10,9 @@
   pointer-events: none;
 }
 
+*{
+  font-family: "Kanit", sans-serif !important;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -70,7 +73,7 @@
   text-align: center;
   font-weight: bold;
   font-size: 22px;
-  margin-top: 10px;
+  margin: 5px;
 }
 
 .header-2 {
@@ -86,7 +89,7 @@
 }
 
 .text-descrip {
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .photo {

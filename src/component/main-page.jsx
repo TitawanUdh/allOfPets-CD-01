@@ -26,28 +26,35 @@ function MainPage() {
       name:
       {
         name_en: 'chowder',
-        name_th: 'ชาวเดอร์'
+        name_th: 'ชาวเดอร์',
+
       }
     },
     {
       owner:
       {
         owner_en: 'Navarrha (Aom)',
-        owner_th: 'ณวรา (ออม)'
+        owner_th: 'ณวรา (ออม)',
+        owner_title_en: 'Handler / owner',
+        owner_title_th: 'เจ้าของ',
       }
     },
     {
       phone:
       {
         phone_en: '091-717-6969',
-        phone_th: '091-717-6969'
+        phone_th: '091-717-6969',
+        phone_title_en: 'phone',
+        phone_title_th: 'เบอร์โทร',
       }
     },
     {
       address:
       {
         address_en: 'Wangthonglang / BKK',
-        address_th: 'วังทองหลาง / กรุงเทพ'
+        address_th: 'วังทองหลาง / กรุงเทพ',
+        address_title_en: 'city / state',
+        address_title_th: 'ที่อยู่',
       }
     },
   ]
@@ -81,17 +88,19 @@ function MainPage() {
                 </Button>
               </div>
               <div className="info">
-                <h2>{lan ? dataPageOne[1]?.name?.name_en : dataPageOne[1]?.name?.name_th}</h2>
-                <p><strong>Handler / Owner:</strong><br />
+                <h2 className='mt-0'>{lan ? dataPageOne[1]?.name?.name_en : dataPageOne[1]?.name?.name_th}</h2>
+                <p><strong>
+                {lan ? dataPageOne[2]?.owner?.owner_title_en : dataPageOne[2]?.owner?.owner_title_th}:</strong><br />
                   <span className='text-infos'>{lan ? dataPageOne[2]?.owner?.owner_en : dataPageOne[2]?.owner?.owner_th}</span>
                 </p>
                 <p>
-                  <strong>Phone:</strong><br />
+                  <strong>{lan ? dataPageOne[3]?.phone?.phone_title_en : dataPageOne[3]?.phone?.phone_title_th}:</strong><br />
+                  
                   <a href={`tel:${dataPageOne[3]?.phone?.phone_en}`}>
                     {lan ? dataPageOne[3]?.phone?.phone_en : dataPageOne[3]?.phone?.phone_th}
                   </a>
                 </p>
-                <p><strong>City / State:</strong><br />
+                <p><strong>{lan ? dataPageOne[4]?.address?.address_title_en : dataPageOne[4]?.address?.address_title_th}:</strong><br />
                   <span className='text-infos'>{lan ? dataPageOne[4]?.address?.address_en : dataPageOne[4]?.address?.address_th}</span>
                 </p>
               </div>
